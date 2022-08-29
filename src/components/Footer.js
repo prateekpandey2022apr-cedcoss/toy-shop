@@ -18,7 +18,7 @@ function Footer() {
                 <a href="">Privacy</a>
               </li>
               <li>
-                <a href="">Site Map</a>
+                <a href="">Help</a>
               </li>
             </ul>
           </div>

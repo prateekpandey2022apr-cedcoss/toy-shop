@@ -2,11 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "./components/Footer";
 import PrimarnyNav from "./components/PrimarnyNav";
+import SecondaryNav from "./components/SecondaryNav";
 
 function Success() {
   return (
     <>
       <PrimarnyNav />
+      <SecondaryNav />
       <div className="wrapper">
         <div className="row order-success-container text-center">
           <div className=" col-4 order-success">

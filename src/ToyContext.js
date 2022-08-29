@@ -32,7 +32,11 @@ export function ToyProvider({ children }) {
   const [session, setSession] = useState({});
   const [from, setFrom] = useState("");
 
+  const [modalOpen, setModalOpen] = useState(false);
+
   const [scrollPosition, setScrollPosition] = useState(0);
+
+  const [currentProduct, setCurrentProduct] = useState({});
 
   const navigate = useNavigate();
   let location = useLocation();
@@ -364,6 +368,10 @@ export function ToyProvider({ children }) {
         scrollPosition,
         handleBackToTopClick,
         moveToTop,
+        modalOpen,
+        setModalOpen,
+        currentProduct,
+        setCurrentProduct,
       }}
     >
       {children}

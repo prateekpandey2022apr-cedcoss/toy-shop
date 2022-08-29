@@ -336,6 +336,10 @@ div img {
   margin-top: auto;
 }
 
+.showcase .product .product-rating {
+  color: #DCA452;
+}
+
 /*  end of product listing */
 
 /* toy categories */
@@ -471,6 +475,10 @@ div img {
 
 .listing .product .cart-btn {
   margin-top: auto;
+}
+
+.listing .product-rating {
+  color: #DCA452;
 }
 
 /* ###################### */

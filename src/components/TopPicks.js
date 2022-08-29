@@ -2,16 +2,66 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import inventory from "../data";
 import ToyContext from "../ToyContext";
+import Modal from "@mui/material/Modal";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 
 function TopPicks() {
   const topPicks = inventory.filter((_item) => _item["top-picks"] === true);
 
   console.log(topPicks);
 
-  const { handleAddCart } = useContext(ToyContext);
+  const {
+    handleAddCart,
+    modalOpen,
+    setModalOpen,
+    currentProduct,
+    setCurrentProduct,
+  } = useContext(ToyContext);
+
+  const style = {
+    textAlign: "center",
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: 400,
+    bgcolor: "background.paper",
+    border: "2px solid #000",
+    boxShadow: 24,
+    p: 4,
+  };
 
   return (
     <>
+      <Modal open={modalOpen} onClose={() => setModalOpen(false)}>
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            {currentProduct?.name}
+          </Typography>
+          <Typography>
+            <img src={currentProduct?.image} />
+          </Typography>
+          <Typography>${currentProduct?.price}</Typography>
+          <Typography className="modal-rating">
+            {Array(currentProduct.rating)
+              .fill(0)
+              .map((_item) => {
+                return (
+                  <span>
+                    <i class="fa-solid fa-star"></i>
+                  </span>
+                );
+              })}
+          </Typography>
+          <Typography id="modal-modal-title" variant="h6" component="h4">
+            Product Details: <br />
+            Duis mollis, est non commodo luctus, nisi
+          </Typography>
+        </Box>
+      </Modal>
+
       <div className="wrapper">
         <div className="row bestsellers">
           <div className="col-4 text-center">
@@ -49,7 +99,7 @@ function TopPicks() {
           </div> */}
           <div className="col-4">
             <div className="product-list">
-              {topPicks.map((product) => {
+              {topPicks.map((product, idx) => {
                 return (
                   <>
                     <div className="product">
@@ -57,7 +107,29 @@ function TopPicks() {
                         <img src={product.image} />
                       </div>
                       <div className="product-title">
-                        <h3 className="product-name">{product.name}</h3>
+                        <h3 className="product-name">
+                          <a
+                            id={idx}
+                            href="#/"
+                            onClick={(event) => {
+                              setModalOpen(true);
+                              setCurrentProduct(product);
+                            }}
+                          >
+                            {product.name}
+                          </a>
+                        </h3>
+                      </div>
+                      <div className="product-rating">
+                        {Array(product.rating)
+                          .fill(0)
+                          .map((_item) => {
+                            return (
+                              <span>
+                                <i class="fa-solid fa-star"></i>
+                              </span>
+                            );
+                          })}
                       </div>
                       <div className="product-price">${product.price}</div>
                       <div className="cart-btn">

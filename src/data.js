@@ -10,6 +10,7 @@ const inventory = [
     category: "action figures",
     image: "../images/p1.jpeg",
     "top-picks": true,
+    rating: 4,
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ const inventory = [
     category: "action figures",
     image: "../images/p2.jpeg",
     "top-picks": false,
+    rating: 2,
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ const inventory = [
     category: "action figures",
     image: "../images/p3.jpeg",
     "top-picks": true,
+    rating: 5,
   },
   {
     id: 4,
@@ -37,6 +40,7 @@ const inventory = [
     category: "cars & trucks",
     image: "../images/p4.jpeg",
     "top-picks": true,
+    rating: 2,
   },
   {
     id: 5,
@@ -46,6 +50,7 @@ const inventory = [
     category: "cars & trucks",
     image: "../images/p5.jpeg",
     "top-picks": false,
+    rating: 4,
   },
   {
     id: 6,
@@ -55,6 +60,7 @@ const inventory = [
     category: "puzzles",
     image: "../images/p6.jpeg",
     "top-picks": true,
+    rating: 2,
   },
   {
     id: 7,
@@ -64,6 +70,7 @@ const inventory = [
     category: "puzzles",
     image: "../images/p7.jpeg",
     "top-picks": true,
+    rating: 1,
   },
   {
     id: 8,
@@ -73,6 +80,7 @@ const inventory = [
     category: "puzzles",
     image: "../images/p8.jpeg",
     "top-picks": true,
+    rating: 4,
   },
   {
     id: 9,
@@ -82,6 +90,7 @@ const inventory = [
     category: "cars & trucks",
     image: "../images/p9.jpeg",
     "top-picks": true,
+    rating: 3,
   },
   {
     id: 10,
@@ -91,6 +100,7 @@ const inventory = [
     category: "dinosaur toys",
     image: "../images/p10.jpeg",
     "top-picks": false,
+    rating: 5,
   },
   {
     id: 11,
@@ -100,6 +110,7 @@ const inventory = [
     category: "dinosaur toys",
     image: "../images/p11.jpeg",
     "top-picks": true,
+    rating: 1,
   },
   {
     id: 12,
@@ -109,6 +120,7 @@ const inventory = [
     category: "dinosaur toys",
     image: "../images/p12.jpeg",
     "top-picks": true,
+    rating: 4,
   },
   {
     id: 13,
@@ -118,6 +130,7 @@ const inventory = [
     category: "puzzles",
     image: "../images/p13.jpeg",
     "top-picks": false,
+    rating: 5,
   },
   {
     id: 14,
@@ -127,6 +140,7 @@ const inventory = [
     category: "cars & trucks",
     image: "../images/p14.jpeg",
     "top-picks": false,
+    rating: 5,
   },
 ];
 

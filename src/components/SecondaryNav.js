@@ -19,7 +19,7 @@ function SecondaryNav() {
             <a href="#/">Blog</a>
           </li>
           <li>
-            <a href="#/">Contact</a>
+            <a href="#/">Help</a>
           </li>
           {loggedIn ? (
             <li>
